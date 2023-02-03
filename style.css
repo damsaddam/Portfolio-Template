@@ -1,0 +1,296 @@
+/* Font Family */
+/* font-family: 'Ubuntu', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Josefin Sans', sans-serif;
+*/
+/* End Font Family */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c4dfe6;
+  width: 100%;
+}
+
+/* Loader */
+.bg-loader {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 9rem;
+  height: 9rem;
+  border: 3px solid rgb(102, 102, 102);
+  border-radius: 50%;
+  border-top-color: black;
+  border-right-color: black;
+  border-bottom-color: black;
+  animation: rotate 0.5s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* End Loader */
+
+/* Nav */
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #003b46;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0 0 0 50px;
+  line-height: 3;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 0 3rem 0 0;
+  color: white;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-list a:hover {
+  transform: translateY(-15px);
+}
+/* End Nav */
+
+section {
+  display: block;
+  width: 100%;
+}
+
+/* About */
+#welcome-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #c4dfe6;
+  background-color: #003b46;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+}
+
+#welcome-section .card {
+  text-align: center;
+  padding: 50px;
+  background-color: #151515;
+  border: 5px solid;
+  border-image: linear-gradient(#ff512f, #dd2476, #1c64ff) 1;
+  animation: rotate 2.5s ease-in infinite;
+}
+
+@keyframes rotate {
+  50% {
+    border-image: linear-gradient(360deg, #ff0000, yellow, green) 1;
+  }
+}
+
+#welcome-section p {
+  font-size: 1.4rem;
+}
+/* End About */
+
+/* My Work */
+#projects {
+  text-align: center;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.projects-header {
+  font-family: 'Josefin Sans', sans-serif;
+  max-width: 35rem;
+  padding: 4px 0;
+  margin: 0 auto 2rem auto;
+  border-bottom: 0.1rem solid #003b46;
+  background-color: #c4dfe6;
+  color: #003b46;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+.projects-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.projects-body .card {
+  background-color: #003b46;
+  border: 5px solid;
+  border-image: linear-gradient(#ff512f, #dd2476, #1c64ff) 1;
+  animation: rotate 2.5s ease-in infinite;
+}
+
+@keyframes rotate {
+  50% {
+    border-image: linear-gradient(360deg, #ff0000, yellow, green) 1;
+  }
+}
+
+.projects-body a {
+  color: white;
+  text-decoration: none;
+}
+
+.projects-body a:hover {
+  color: #c4dfe6;
+}
+
+.projects-body p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 1rem;
+}
+
+.projects-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.btn-projects {
+  padding: 0.7rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 45px;
+  cursor: pointer;
+  border: none;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-projects:hover {
+  background-color: rgb(0, 255, 255);
+  transform: translateX(15px);
+  border: none;
+}
+/* End My Work */
+
+/* Contact */
+#contact {
+  background-color: #003b46;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.contact-header {
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 9rem;
+  width: 100%;
+}
+
+.contact-header h2 {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+.contact-header p {
+  font-size: 1.8rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-links a {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 0 6rem;
+  text-decoration: none;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-links a:hover {
+  transform: translateY(-15px);
+}
+/* End Contact */
+
+footer {
+  background-color: #003b46;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: 4px solid #66a5ad;
+}
+
+/* Scroll Menu */
+html {
+  scroll-behavior: smooth;
+}
+.scroll {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.5s;
+  background: #008c5f url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center;
+}
+
+.scroll:hover {
+  background: #1d2129 url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center;
+}
+/* End Scroll Menu */
+
+/* Responsive */
+
+/* End Responsive */
